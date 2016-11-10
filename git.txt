@@ -1,0 +1,67 @@
+git 版本管理工具准备
+
+1.准备
+1.1git操作文件 
+1.2建立一个github帐号 
+
+2.创建一个版本组织(版本库)
+
+//右上角 加号 点击  new ora...
+//创建新的组织架构
+//在新的组织架构中 创建新的版本库地址
+
+3.与版本库建立链接
+3.1 创建本地ssh 
+ssh-keygen -t rsa -C "youremail@example.com"
+连续点击回车即可
+
+将c/users/admin../.ssh/id_rsa 获取出来 复制
+
+然后打开github  右上角settings点击
+
+进入页面 左侧列表点击 SSH and GPG keys
+
+在右侧的ssh keys 添加一个新的ssh密钥
+
+4.在本地创建一个文件路径 如 E:/Bpp
+
+进入app文件夹 通过鼠标右键 打开git bash
+
+新建一个文件
+
+git init    初始化一个git工作目录
+
+git add 文件名| .（点代表所有） 点击回车  添加一个修改
+
+git commit -m '提交合并' 本地缓存区
+
+git remote add origin 自己的版本库路径地址  （格式是 ssh 如:git@github.com:1608-for-test/app.git）
+//建立本地与远程服务器版本段的连接
+
+git push -u origin master （将电脑本地的缓存区文件上传到远程服务端）
+
+
+
+// 正常工作的流程
+git status   //查看修改或操作过的文件
+
+git add   添加新增文件
+
+git checkout 文件 (丢弃修改的操作)
+
+git status //查看刚才修改过的文件
+
+git commit -m "合并"
+
+git pull 从服务器端获取最新代码
+
+git status  查看新的文件是否有冲突 (如果有冲突 > 修改代码 > )
+
+git push  将本地缓存区的代码上传到服务器端
+
+
+
+
+
+
+
